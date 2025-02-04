@@ -12,7 +12,7 @@ namespace AleksaRistic
         private int numeroPompe;
         private SemaphoreSlim pompe;
         private Queue<(int idAuto, int richiesta)> codaAuto = new Queue<(int, int)>();
-        private object lockObject = new object();
+        private object lockObject = new object();  //per fare in modo che possa controllare un solo thread , per esempio quando il carburante alle pompe è minore della richiesta
         private bool rifornimentoInCorso = false;
         private Random random = new Random();
         private int pompaAttuale = 1;
